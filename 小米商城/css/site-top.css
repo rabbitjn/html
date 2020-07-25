@@ -1,0 +1,76 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+a,a:hover{
+    text-decoration: none;
+}
+.site-topbar{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+    color: #b0b0b0;
+    background: #333;
+}
+.site-topbar .container{
+    width: 1226px;
+    margin: 0 auto;
+    height: 40px;
+    /* position: relative; */
+}
+.container .topbar-nav{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+
+}
+.topbar-nav a{
+    color: #b0b0b0;
+    line-height: 40px;
+    display: inline-block;
+    text-decoration: none;
+}
+.topbar-nav a:hover{
+    color:white;
+}
+.topbar-nav .sep{
+    margin: 0 .3em;
+    color: #424242;
+}
+.site-topbar .cart-mini {
+    position: relative;
+    float: right;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #b0b0b0;
+    width: 120px;
+    background: #424242;
+}
+.topbar-cart img{
+    width: 20px;
+    height: 20px;
+    /* margin-right: 4px; */
+    position: absolute;
+    left: 12px;
+    top: 9px;
+    
+}
+.cart-mini .text{
+    margin-left: 35px;
+}
+.cart-menu .menu-content{
+    padding: 20px 0 0;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: 316px;
+    height: 100px;
+    color: #424242;
+    background:brown;
+    line-height: 100px;
+    text-align: center;
+    /* display: none; */
+}

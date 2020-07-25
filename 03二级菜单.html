@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二级菜单</title>
+    <style>
+        /* 多个竖向排列的li可以实现横向的导航栏 */
+        li{
+            list-style: none;
+            width:100px;
+            height: 50px;
+            background-color: lime;
+            float: left;
+            margin-left: 20px;
+            text-align: center;
+            line-height: 50px;
+        }
+        a{            
+            text-decoration: none;
+        }
+        .nav{
+            width: 600px;
+            height: 40px; /*文字高度*/
+            background-color:#eee;
+            margin-left: 200px;
+            line-height: 40px;
+            text-align: center;
+        }
+        .nav1{
+            width: 100px;
+            height: 40px;
+            float: left;
+        }
+        .hide{
+            width: 200px;
+            height: 300px;
+            background-color: magenta;
+            display: none;
+        }
+        .nav1:hover .hide{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏  -->
+    <!-- 百度首页的菜单“设置”部分实现 -->
+    <div class="nav">
+        <div class="nav1">
+            <a href="">一级菜单</a>
+            <div class="hide">二级菜单出现</div>
+        </div>
+        <div class="nav1">
+            <a href="">一级菜单</a>
+            <div class="hide">二级菜单出现</div>
+        </div>
+        <div class="nav1">
+            <a href="">一级菜单</a>
+            <div class="hide">二级菜单出现</div>
+        </div>
+    </div>
+        <!-- 用淘宝菜单说明如何设计实现 -->
+    <!-- <ul>
+        <li>aaa</li>
+        <li>bbb</li>
+        <li>ccc</li>
+        <li>ddd</li>
+    </ul> -->
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <title>淡入淡出实现轮播</title>
+      <style>
+          *{
+              margin: 0px;
+              padding: 0px;
+          }
+          .content{
+              width: 400px;
+              height: 300px;
+              background-color: pink;
+              position: relative;
+          }
+          .content img{
+                width: 400px;
+                height: 300px;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                /* 默认全部隐藏 */
+                display: none;
+                cursor: pointer;
+          }
+          .navbar{
+              position: absolute;
+              left: 100px;
+              bottom: 30px;
+          }
+          .navbar li{
+              float: left;
+              list-style: none;
+              border-radius: 50%;
+              display: block;
+              width: 30px;
+              height: 30px;
+              background-color: yellowgreen;
+              margin-left: 10px;
+          }
+      </style>
+</head>
+<body>
+    <div class="content">
+        <img src="img/1.jpg" alt="">
+        <img src="img/2.jpg" alt="">
+        <img src="img/4.jpg" alt="">
+        <img src="img/5.jpg" alt="">
+        <ul class="navbar">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script src="js/jquery-2.1.0.js"></script>
+    <script>
+        // 1. 获取所有的img标签
+        var imgList = $("img");
+        // 2.获取所有的li
+        var iList = $(".navbar li");
+        // 3.默认显示第一张图,第一个li变颜色
+        imgList.eq(0).show();
+        //定义变量，存储当前显示图片的下标
+        var index=0;
+        iList.eq(0).css("background-color","purple");
+        autoMove();
+        function autoMove(){
+            timer = setInterval(function() {
+                // 淡出当前图片,
+                imgList.eq(index).fadeOut("slow");
+                index++;
+                if(index>imgList.length-1){
+                    index=0;
+                }
+                // 淡入下一张图片
+                imgList.eq(index).fadeIn("slow");           
+                // 修改li颜色
+                // siblings获取当前的其他兄弟标签，链式操作(先将自己变颜色，然后讲兄弟变为其他颜色)
+                iList.eq(index).css("background-color","purple").siblings().css("background-color","yellowgreen");
+             }, 2000);
+        }
+
+        // 5.鼠标覆盖content，停止轮播
+        $(".content").mouseenter(function(){
+            //清空定时器
+            clearInterval(timer); 
+        })
+        // 6.鼠标移除content，继续轮播
+        $(".content").mouseleave(function(){
+            // 继续轮播
+            autoMove();
+        })
+        // 7.点击任意一个li，切换到对应的图片
+        iList.click(function(){
+            // 获取当前点击li下标,this是js代码，套用jquery，套用$()
+            console.log($(this).index());
+            var curentIndex = $(this).index();
+            // 淡出当前显示的图片
+            imgList.eq(index).fadeOut("slow");
+            // 淡入点击的序号对应的图片
+            imgList.eq(curentIndex).fadeIn("slow");
+            index=curentIndex;
+            // 改变lilist
+            iList.eq(index).css("background-color","purple").siblings().css("background-color","yellow-green");
+        })
+    </script>
+</body>
+</html>

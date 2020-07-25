@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js实现放大镜</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="content">
+        <!-- 显示图片的div -->
+        <div id="show_div">
+            <img src="img/small1.jpg" alt="" id="show_img">
+            <span id="shadow"></span>
+        </div>
+        <!-- 大图 -->
+        <div id="big_div"><img src="img/big1.jpg" alt="" id="big_img"></div>
+        <!-- 图片导航栏 -->
+        <ul class="nav">
+            <!-- big-src自定义属性 -->
+            <li><img class="imge_one" src="img/small1.jpg" big-src="img/big1.jpg" alt=""></li>
+            <li><img class="imge_one"  src="img/small2.jpg" big-src="img/big2.jpg" alt=""></li>
+            <li><img class="imge_one"  src="img/small3.jpg" big-src="img/big3.jpg" alt=""></li>
+            <li><img class="imge_one"  src="img/small4.jpg" big-src="img/big4.jpg" alt=""></li>
+        </ul>
+    </div>
+    <script src="js/mirror.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
+#content{
+    width: 400px;
+    height: 500px;
+    background-color: aqua;
+}
+/*
+逗号，表示分隔，两个标签都会执行同样的命令
+*/
+#show_div ,#show_img{
+    width: 400px;
+    height: 400px;
+}
+#show_div{
+    position: relative;
+}
+/* 图片导航栏 */
+.nav li{
+    list-style: none;
+    float: left;/*横向排列*/
+    width: 100px;
+    height: 100px;
+}
+/* 设置导航栏的小图样式 */
+.imge_one{
+    width: 100px;
+    height: 100px;
+}
+/* 阴影区设置 */
+#shadow{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color:rgba(84, 255, 159, 0.5);
+    display: block;  
+    display: none;
+}
+/* 右边放大区域的样式 */
+#big_div{
+    width: 200px;
+    height: 200px;
+    background-color: salmon;
+    position: absolute;
+    left: 400px;
+    top: 0px;
+    /* 溢出部分隐藏 */
+    overflow: hidden;
+    display: none;
+}
+#big_img{
+    position: absolute;
+    width: 800px;
+    height: 800px;
+}

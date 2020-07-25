@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>Document</title>
+     <style>
+         *{
+             margin: 0px;
+             padding:0px;
+         }
+         .content{
+             width: 400px;
+             height: 400px;
+             background-color: black;
+             margin:100px auto;
+         }
+         .content li{
+             list-style-type:none;
+             float: left;
+             width: 100px;
+             height: 40px;
+             text-align: center;
+             line-height: 40px;
+             background-color: blueviolet;
+             border-right: burlywood solid 2px;
+             box-sizing: border-box; /*边框从已知宽度中取得*/
+             cursor: pointer; /*鼠标覆盖设置手指样式*/
+         }
+         .content img{
+             width: 400px;
+             height: 360px;
+         }
+     </style>
+</head>
+<body>
+    <div class="content">
+    <ul>
+        <!-- 点击那个li，传递对应的图片路径 -->
+        <li onclick="changeImage('img/1.jpg')">英雄1</li>
+        <li onclick="changeImage('img/2.jpg')">英雄2</li>
+        <li onclick="changeImage('img/3.jpg')" >英雄3</li>
+        <li onclick="changeImage('img/4.jpg')">英雄4</li>
+    </ul>
+
+    <img src="img/1.jpg" id="show_img" alt="">    </div>
+    <script type="text/javascript">
+          //获取img标签
+       var showImg=document.getElementById("show_img")
+        //定义切换图片的方法
+        function changeImage(imgSrc){
+            showImg.src=imgSrc;
+        }
+    </script>
+</body>
+</html>

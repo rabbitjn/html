@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+        initial-scale=1.0 初始的缩放比例
+        width=device-width：宽度等于移动端的设备宽度
+        maximum-scale=1.0:允许用户缩放的最大比例
+        minimum-scale=1.0:允许用户缩放的最小比例
+        user-scalable=no:是否允许用户手动缩放
+
+     -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/page1.css">
+    <link rel="stylesheet" href="css/page2.css">
+    <link rel="stylesheet" href="css/page3.css">
+</head>
+<body>
+    <!-- content 中大div，内部4个div，代表4页内容 -->
+    <div class="content">
+        <div class="page page1">
+            <img src="images/indexCloud.png" class="page1_cloud">
+            <img src="images/indexElements.png" class="page1_element">
+            <img src="images/indexTxt.png" class="page1_txt">
+            <img src="images/indexFlowers01.png" class="page1_flower1">
+            <img src="images/indexFlowers02.png" class="page1_flower2">
+            <img src="images/indexFlight.png" class="page1_flight">
+            <img src="images/indexBuilding.png" class="page1_building">
+        </div>
+        <div class="page page2">
+            <img src="images/wasBg.jpg" class="page2_bg">
+            <img src="images/wasFarm.png" class="page2_fram">
+            <img src="images/wasIT.png" class="page2_it">
+        </div>
+        <div class="page page3">
+        <!-- 场景1，追公交车 -->
+        <img src="images/earlyBg.jpg" class="page3_bg">
+        <img src="images/lastBusStation.png" class="page3_station">
+        <img src="images/bus.png" class="page3_bus">
+        <img src="images/earlyTitle.png" class="page3_title">
+        <img src="images/lastBusTitle.png" class="page3_bus_title">
+        <img src="images/lastBusAvatar.png" class="page3_avatar">
+        <!-- 场景2  -->
+            <img src="images/myTeamWall.png" class="page3_wall">
+            <img src="images/myTeamAvatar.png" class="page3_my">
+            <img src="images/myTeamSpace.png" class="page3_space">
+            <img src="images/myteamWhereTxt.png" class="page3_where">
+        </div>
+
+        <div class="page page4"></div>
+    </div>
+    <!-- <div class="page"></div> -->
+    <script src="js/jquery-2.1.0.js"></script>
+    <!-- 引入的顺序，1.jquery；2.touchswipe；3.main -->
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

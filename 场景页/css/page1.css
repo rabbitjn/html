@@ -1,0 +1,100 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.content{
+    position: absolute;
+    top: 0%; /*0表示第一页，-100%是第一页*/
+}
+.page{
+    /* width: 100%;
+    height: 100%; */
+    /* background-color: blue; */
+    position: relative;
+}
+.page1{
+    background-color: blue;
+}
+.page2{
+    background-color: brown;
+}
+.page3{
+    background-color: cornflowerblue;
+}
+.page4{
+    background-color: coral;
+}
+/* 逗号表示分割，两个选择器都会执行 */
+.page1_cloud,.page1_element{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    left:0px;
+    top:0px;
+    animation: page1_scale 3s linear infinite;
+}
+@keyframes page1_scale{
+    0%{
+
+    }
+    50%{
+        transform: scale(0.9);
+    }
+    100%{
+
+    }
+}
+.page1_txt{
+    width: 50%;
+    position: absolute;
+    left:17%;
+    top : 20%;
+}
+.page1_flower1{
+    width: 15%;
+    height:10%;
+    position: absolute;
+    left:15%;
+    top:20%;
+    animation: page1_rotate 2s linear infinite;
+}
+.page1_flower2{
+    width: 15%;
+    position: absolute;
+    right:15%;
+    top:25%;
+    animation: page1_rotate 2s linear infinite; 
+}
+@keyframes page1_rotate{
+    0%{
+
+    }
+    25%{
+        transform: rotate(-30deg);
+    }
+    50%{
+
+    }
+    75%{
+        transform: rotate(30deg);
+    }
+    100%{
+
+    }
+}
+.page1_flight{
+    width:0%;
+    height: 0%;  /*完全没有飞机在*/
+    position: absolute;
+    left: 20%;
+    top: 60%;
+
+}
+.page1_building{
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    bottom: 0%;
+    display: none;
+}
+/* page2 */

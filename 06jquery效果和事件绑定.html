@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>jquery效果</title>
+     <style>
+         .div1{
+             width: 200px;
+             height: 200px;
+             background-color: brown;
+             display: none;
+         }
+     </style>
+</head>
+<body>
+    <button>点击按钮</button>
+    <div class="div1"></div>
+    <script src="js/jquery-2.1.0.js"></script>
+    <script>
+        // 给button按钮点击事件触发
+        $("button").click(function(){
+            // $(".div1").show("slow"); //slow是600毫秒
+            // 1.内部的function是show执行完后的执行函数
+            // $("div1").show("2000",function(){
+            //     alert("显示完毕");
+            // });//2秒显示出来
+            // // 2.隐藏显示的标签
+            // $(".div1").hide()
+            // 3.toggle,显示后就隐藏，当多次点击就会不停运行
+            // stop先清空所有的动画，然后在开始新的动画，避免刚才点击多次
+            // $(".div1").stop.toggle(3000);
+            // 4.动态向下滑动(高度增加)，显示被隐藏元素
+            // $(".div1").slideDown(1000);
+            // //5.动态向上滑动(高度减少)，隐藏
+            // $(".div1").slideUp(1000);
+            // 6.toggle滑上滑下
+            // $(".div1").stop().slideToggle(1000);
+            // 7.淡入淡出
+            // $(".div1").fadeIn(1000);
+            // $(".div1").fadeOut(2000);
+            $(".div1").stop().fadeToggle(2000);
+        })
+
+    </script>
+</body>
+</html>

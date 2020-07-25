@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <title>Document</title>
+</head>
+<body>
+    <dvi id="div1"></dvi>
+    <input type="text" id="my_input">
+    <div class="content"></div>
+    <div class="content"></div>
+    <div class="content"></div>
+    <!-- jquery：简洁的js框架，封装了
+    引入jquery
+    -->
+    <script src="js/jquery-2.1.0.js"></script>
+    <script>
+        // js写法，获取div1的标签
+        var div1 = document.getElementById("div1");
+        div1.innerText="hello world";
+        // div1.innerHTML="<a href=''>百度一下</a>";
+        // 一.使用jquery的id选择题获取标签jquery对象
+        // 两个对象是不一样的，不能混着用
+        var jqDive1 = $("#div1");
+        jqDive1.text("你好，世界");//text等价于innertext
+        // jqDive1[0].innerText="你好，世界"; //innerText方法是js的，不是jquery的
+        jqDive1.html("<a href=''>百度一下</a>");
+        // 给输入框赋值
+        // 3.val等价于js框中的value属性
+        $("my_input").val("输入框中的值");
+        // 2.使用类选择题获取标签
+        $(".content").text("类选择器赋值")
+        // 根据索引获取标签
+        $(".content").eq(0).text("第一个content");
+    </script>
+</body>
+</html>

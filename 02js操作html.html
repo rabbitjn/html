@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        #main{
+            width: 200px;
+            height: 200px;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+   <div id="main">你好，世界</div> 
+   <script>
+    //    浏览器查看source，断点设置，看dom的含义和执行获取main的值
+       var main=document.getElementById("main")
+       main.innerHTML="hello world"
+       main.innerText="<a href=''>百度一下</a>"
+   </script>
+</body>
+</html>

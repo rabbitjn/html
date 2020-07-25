@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        .main{
+            width: 200px;
+            height: 200px;
+            background-color:black;
+            /* position:absolute; */
+        }
+    </style>
+</head>
+<body>
+    <div class="main">我的世界 </div>
+    <img src="" alt="">
+    <a href="">爱奇艺</a>
+    <p id="test_p" big-property="xixi"></p> 
+    <!-- big-property自定义属性 -->
+    <input type="checkbox" class="check">复选框1
+    <input type="checkbox" class="check">复选框2
+    <script src="js/jquery-2.1.0.js"></script>
+    <script>
+        // 1.修改div的背景颜色
+        $(".main").css("background-color","red");
+        // json格式：{"name":"张三","age":18}
+        $(".main").css(
+            {
+            "background-color":"red",
+            "color":"white",
+            "font-size":"20px",
+        });
+        // 3.修改属性
+        $("img").attr({
+            "src":"img/1.jpg",
+            "title":"英雄"
+        });
+        $("a").attr("href","https://www.iqiyi.com");
+        $("p").attr("id","test_p2");
+        // 3.2修改属性prop
+        $("img").prop("src","img/2.jpg");
+        // 修改复选框
+        // $(".check").prop("checked",true);
+        $(".check").attr("checked",true);
+        // checked属于预定义属性
+        $("p").attr("big-property","哈哈");
+        // $("p").prop("big-property","哈哈");
+        // prop不能修改自定义属性
+        //3.3 attr和prop对比总结：attr可以修改所有属性  prop只能修改预定义属性，不能修改自定义属性
+        //4. 添加class
+        $("p").addClass("test_p");
+    </script>
+</body>
+</html>

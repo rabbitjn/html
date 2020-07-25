@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+        #circle{
+            width: 200px;
+            height: 200px;
+            background-color: ;
+            border-radius: 50%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            background-color: #ff5384;
+        }
+    </style>
+</head>
+<body>
+    <div id="circle"></div>
+    <button id="btn">点我运行停止</button>
+    <script>
+        var circle=document.getElementById("circle");
+        var timer=null
+        //定义方法
+        function startMove(){
+            // 定义速度
+            var speed=1
+            //开启定时器
+            timer=setInterval(function() {
+                //3.修改circle的left,在原有的偏移量的基础上移动
+                //4.获取div的左偏量
+                var divLeft=circle.offsetLeft;
+                // console.log(divLeft);
+                // 5.判断右移的值达到极限
+                if (divLeft>=1000){
+                    // speed=-1;使用数学类，
+                    // ceil向上取整,Math.floor向下取整
+                    // Math.round四舍五入
+                    // num.toFixed(2)保留2位小数
+                    speed=-Math.abs(speed);
+                }else if(divLeft<=0){
+                    speed=Math.abs(speed);
+                }
+                circle.style.left=divLeft+speed+"px";
+            }, 1);
+        }  
+            //  首次运行调用startmove
+        startMove()
+        // 获取button标签
+        var btn= document.getElementById("btn")
+        var count=0
+        btn.onclick=function(){
+            // clearInterval(timer);
+            count++;
+            if(count%2!=0){
+                clearInterval(timer);
+            }else{
+                // 开启定时器
+                startMove();
+
+            }
+        }
+    </script>
+</body>
+</html>
