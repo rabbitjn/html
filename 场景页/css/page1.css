@@ -4,7 +4,7 @@
 }
 .content{
     position: absolute;
-    top: -100%; /*0表示第一页，-100%是第一页*/
+    top: -10%; /*0表示第一页，-100%是第一页*/
 }
 .page{
     /* width: 100%;
